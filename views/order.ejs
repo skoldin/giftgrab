@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!-- Font link -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat" rel="stylesheet">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/main.css">
+    <title>GiftGrab</title>
+</head>
+<body>
+<%- include('nav', {navClass: "bg-primary navBarSignUp"}); %>
+
+    <!-- Order Form -->
+    <div class="container my-3">
+            <h1 class="display-1 text-primary text-center" id="orderHeader"><span id="orderHeaderText">Order with GiftGrab</span> <i class="fas fa-gift"></i></h1>
+                <div class="orderPage">
+                    <div class="row">
+                        <div class="col-12">
+                            <form action="/order"
+                                  id="order-form"
+                                  class="at-step-1"
+                                  method="post"
+                                  enctype="multipart/form-data">
+                                <div id="step-1">
+                                    <div class="form-group">
+                                        <label for="delivery" class="text-primary">Delivery Address</label>
+                                        <input type="text" name="delivery" class="form-control" placeholder="123 Market St." id="delivery" data-description="Delivery Address">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="cityState" class="text-primary">City & State</label>
+                                                <select name="cityState" id="cityState"
+                                                        class="form-control"
+                                                        data-description="City & State">
+                                                    <option value="">City & State</option>
+                                                    <option value="ballwin">Ballwin, MO</option>
+                                                    <option value="manchester">Manchester, MO</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="zipCode" class="text-primary">Zip Code</label>
+                                                <select name="zipCode"
+                                                        id="zipCode"
+                                                        class="form-control"
+                                                        data-description="Zip Code">
+                                                    <option value="">Zip Code</option>
+                                                    <option value="63011">63011</option>
+                                                    <option value="63021">63021</option>
+                                                    <option value="63022">63022</option>
+                                                    <option value="63024">63024</option>
+                                                    <option value="63088">63088</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phoneNumber" class="text-primary">Contact Phone Number</label>
+                                        <input type="text"
+                                               name="phoneNumber"
+                                               class="form-control"
+                                               id="phoneNumber"
+                                               placeholder="(636) 555-5555"
+                                               data-description="Contact Phone Number"
+                                        >
+                                    </div>
+                                </div>
+                                <div id="step-2">
+                                    <div class="form-group">
+                                        <label for="pickup" class="text-primary">Store to pickup from</label>
+                                        <select
+                                                class="form-control"
+                                                name="pickup"
+                                                id="pickup"
+                                                data-description="Store to pickup from">
+                                            <option value="walmart">Wal-Mart</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="orderItem" class="text-primary">What would you like to order?</label>
+                                        <textarea
+                                                name="orderItem"
+                                                class="form-control"
+                                                id="orderItem"
+                                                cols="30"
+                                                rows="5"
+                                                placeholder="Please be specific and use a comma between seperate items!"
+                                                data-description="What would you like to order?"
+                                        ></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="photoUpload" class="text-primary">Images of Items (optional)</label>
+                                        <div>
+                                            <input type="file" name="photoUpload" id="photoUpload" multiple>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="wrap" class="text-primary">Gift wrapped?</label>
+                                                <select class="form-control"
+                                                        name="wrap"
+                                                        id="wrap"
+                                                        data-description="Gift wrapped?">
+                                                    <option value="no">No thank you</option>
+                                                    <option value="yes">Yes! ($5 per gift)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="deliveryDate" class="text-primary">Delivery Date:</label>
+                                                <input
+                                                        type="date"
+                                                        class="form-control"
+                                                        name="deliveryDate"
+                                                        id="deliveryDate"
+                                                        data-description="Delivery Date"
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="step-3">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <ul id="order-review">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3 order-progress">
+                                    <div class="col-4">
+                                        <div class="border step-1"></div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border step-2"></div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border step-3"></div>
+                                    </div>
+                                </div>
+                                <div class="order-buttons-wrap">
+                                    <button id="order-prev-step" type="button" class="btn btn-warning btn-lg">Prev</button>
+                                    <button id="order-next-step" type="button" class="btn btn-primary btn-lg">Next</button>
+                                    <button id="order-button" type="submit" class="btn btn-success btn-lg">Order Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+    </div>
+    <% include modal.ejs %>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/giftgrab.js"></script>
+</body>
+</html>

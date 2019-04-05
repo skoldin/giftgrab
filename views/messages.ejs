@@ -1,0 +1,16 @@
+<% if(error_messages.length) { %>
+    <div class="alert alert-danger" role="alert">
+        <% console.log(error_messages); %>
+        <%= error_messages %>
+    </div>
+<% } %>
+<% if(success_messages.length) { %>
+    <div class="alert alert-success" role="alert">
+        <%= success_messages %>
+    </div>
+<% } %>
+<% if(info_messages.length) { %>
+    <div class="alert alert-info" role="alert">
+        <%= info_messages %>
+    </div>
+<% } %>

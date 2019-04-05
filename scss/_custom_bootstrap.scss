@@ -1,0 +1,6 @@
+//override colors
+$theme-colors: (
+  "primary": rgb(45, 162, 252)
+);
+//include bootstrap
+@import "../bootstrap/scss/bootstrap";

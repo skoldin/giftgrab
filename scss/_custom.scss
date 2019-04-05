@@ -1,0 +1,668 @@
+
+   
+.navbar-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    .navbar {
+        font-family: "Montserrat", sans-serif;
+        position: static;
+        .nav-item {
+            font-size: 1.5rem;
+        }
+    }
+    &.navBarSignUp {
+        position: static;
+        .navbar {
+            @extend .bg-primary;
+        }
+    }
+}
+
+
+
+#showcase {
+    background: url("../images/gift.jpeg") bottom center / cover no-repeat;
+    min-height: 750px;
+    position: relative;
+    
+    .lead {
+        font-size: 3rem;
+    }
+
+    #header {
+        z-index: 2;
+    }
+
+    #order {
+        border-radius: 15px;
+        font-size: 1.5rem;
+    }
+
+    #overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(63, 63, 63, 0.5);
+        z-index: 1;
+    }
+}
+
+#greeting {
+    .lead {
+        font-size: 2rem;
+    }
+}
+
+#threeIcon {
+    i {
+        font-size: 4rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+#customer {
+    h3 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.15rem;
+    }
+}
+
+#giftgrabCarousel {
+    // .carousel-item {
+    //     img {
+    //         height: 350px;
+    //     }
+    // }
+}
+
+#team {
+    hr {
+        border-bottom: 1px solid white;
+    }
+    h5 {
+        font-size: 2rem;
+    }
+}
+
+#pricing {
+    h3 {
+        font-size: 2rem;
+    }
+    h5 {
+        font-size: 5rem;
+    }
+    // #cities {
+    //     height: 220px;
+    // }
+    .city{
+        font-size: 2.5rem;
+    }
+}
+
+#social {
+    i {
+        font-size: 7rem;
+    }
+}
+
+.hideMe {
+    display: none;
+}
+
+#terms {
+    font-size: .8rem;
+}
+
+.modalTitle {
+    color: rgb(45, 162, 252);
+}
+
+@media (min-width: 100px) and (max-width: 350px) {
+    #showcase {
+        min-height: 400px;
+        h1 {
+            font-size: 3rem;
+        }
+        .lead {
+            font-size: .9rem;
+        }
+    }
+    #greeting {
+        h1 {
+            font-size: 2rem;
+        }
+        .lead {
+            font-size: 1.5rem;
+        }
+    }
+    #threeIcon {
+        i {
+            font-size: 4rem;
+        }
+        h3 {
+            font-size: 2rem;
+        }
+    }
+    #customer {
+        h3 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1.15rem;
+        }
+        .carousel-item {
+            img {
+                height: 250px;
+            }
+        }
+    }
+    #team {
+        h1 {
+            font-size: 2.8rem;
+        }
+    }
+    #quotes {
+        h1 {
+            font-size: 1.6rem;
+        }
+        i {
+            font-size: 1.5rem;
+        }
+    }
+    #pricing {
+        #pricingHeader {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.3rem;
+        }
+    }
+    #social {
+        h1 {
+            font-size: 2.4rem;
+        }
+        i {
+            font-size: 5rem;
+        }
+    }
+    #orderHeader {
+        font-size: 2.2rem;
+    }
+    #order2Header {
+        font-size: 2.2rem;
+    }
+    #reviewOrder {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 351px) and (max-width: 576px) {
+    #showcase {
+        min-height: 450px;
+        h1 {
+            font-size: 4rem;
+        }
+        .lead {
+            font-size: 1.4rem;
+        }
+    }
+    #greeting {
+        h1 {
+            font-size: 2.3rem;
+        }
+        .lead {
+            font-size: 1.6rem;
+        }
+    }
+    #threeIcon {
+        i {
+            font-size: 5rem;
+        }
+        h3 {
+            font-size: 2.3rem;
+        }
+    }
+    #customer {
+        h3 {
+            font-size: 1.7rem;
+        }
+        p {
+            font-size: 1.15rem;
+        }
+        .carousel-item {
+            img {
+                height: 250px;
+            }
+        }
+    }
+    #team {
+        h1 {
+            font-size: 2.8rem;
+        }
+    }
+    #quotes {
+        h1 {
+            font-size: 1.8rem;
+        }
+        i {
+            font-size: 1.5rem;
+        }
+    }
+    #pricing {
+        #pricingHeader {
+            font-size: 3.8rem;
+        }
+        p {
+            font-size: 1.3rem;
+        }
+    }
+    #social {
+        h1 {
+            font-size: 2.8rem;
+        }
+    }
+    #orderHeader {
+        font-size: 2.2rem;
+    }
+    #order2Header {
+        font-size: 2.2rem;
+    }
+    #reviewOrder {
+        font-size: 2.2rem;
+    }
+    .orderPage {
+        label {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .navbar {
+        h3 {
+            font-size: 2.3rem;
+        }
+    }
+    #showcase {
+        h1 {
+            font-size: 6rem;
+        }
+        .lead {
+            font-size: 2.3rem;
+        }
+    }
+    #greeting {
+        h1 {
+            font-size: 4rem;
+        }
+    }
+    #threeIcon {
+        i {
+            font-size: 5rem;            
+        }
+        h3 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }
+    #customer {
+        h3 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+        .carousel-item {
+            img {
+                height: 420px;
+            }
+        }
+    }
+    #quotes {
+        h1 {
+            font-size: 3.1rem;
+        }
+    }
+    #pricing {
+        #pricingHeader {
+            font-size: 4rem;
+        }
+        h3 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }
+    #social {
+        h1 {
+            font-size: 4rem;
+        }
+    }
+    #orderHeader {
+        font-size: 3rem;
+    }
+    #order2Header {
+        font-size: 3rem;
+    }
+    #reviewOrder {
+        font-size: 3rem;
+    }
+    .orderPage {
+        label {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .navbar {
+        h3 {
+            font-size: 2.3rem;
+        }
+    }
+    #showcase {
+        h1 {
+            font-size: 7rem;
+        }
+        .lead {
+            font-size: 3rem;
+        }
+    }
+    #greeting {
+        h1 {
+            font-size: 4.5rem;
+        }
+    }
+    #threeIcon {
+        i {
+            font-size: 5.2rem;            
+        }
+        h3 {
+            font-size: 3.2rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }
+    #customer {
+        h3 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+        .carousel-item {
+            img {
+                height: 420px;
+            }
+        }
+    }
+    #quotes {
+        h1 {
+            font-size: 4rem;
+        }
+    }
+    #pricing {
+        #pricingHeader {
+            font-size: 4rem;
+        }
+        h3 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }
+    #social {
+        h1 {
+            font-size: 4rem;
+        }
+    }
+    #orderHeader {
+        font-size: 4rem;
+    }
+    #order2Header {
+        font-size: 4rem;
+    }
+    #reviewOrder {
+        font-size: 4rem;
+    }
+    .orderPage {
+        label {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .navbar {
+        h3:hover {
+            color: rgb(45, 162, 252);	
+        }
+
+        .nav-link:hover {
+            border-bottom: 1px solid rgb(45, 162, 252);
+            transition: border 0.2s;
+        }
+    }
+    #customer {
+        h3 {
+            font-size: 2.3rem;  
+        }
+        .carousel-item {
+            img {
+                height: 350px;
+            }
+        }
+    }
+    #orderHeader {
+        font-size: 5rem;
+    }
+    #order2Header {
+        font-size: 5rem;
+    }
+    #reviewOrder {
+        font-size: 5rem;
+    }
+    .orderPage {
+        label {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media (min-width: 1201px) {
+    .navbar {
+        h3:hover {
+            color: rgb(45, 162, 252);	
+        }
+
+        .nav-link:hover {
+            border-bottom: 1px solid rgb(45, 162, 252);
+            transition: border 0.2s;
+        }
+    }
+    #customer {
+        .carousel-item {
+            img {
+                height: 350px;
+            }
+        }
+    }
+    .orderPage {
+        label {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+    .navbar {
+        background: rgb(45, 162, 252);
+    }
+}
+
+.orderPage {
+    .order-buttons-wrap {
+        #order-next-step, #order-button {
+            float: right;
+        }
+        #order-prev-step {
+            float: left;
+        }
+    }
+    .at-step-1 {
+        #step-1, #order-next-step {
+            display: block;
+        }
+        #step-2, #step-3, #order-prev-step, #order-button {
+            display: none;
+        }
+        .order-progress {
+            .border.step-1 {
+                @extend .border-primary;
+            }
+        }
+    }
+    .at-step-2 {
+        #step-2, #order-next-step, #order-prev-step {
+            display: block;
+        }
+        #step-1, #step-3, #order-button {
+            display: none;
+        }
+        .order-progress {
+            .border.step-2 {
+                @extend .border-primary;
+            }
+        }
+    }
+    .at-step-3 {
+        #step-3, #order-prev-step, #order-button {
+            display: block;
+        }
+        #step-1, #step-2, #order-next-step {
+            display: none;
+        }
+        .order-progress {
+             .border.step-3 {
+                 @extend .border-primary;
+             }
+         }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) { 
+//     #showcase {
+//         min-height: 500px;
+//     }
+// }
+
+// @media (max-width: 768px) {
+//     .navbar {
+//         // background: rgb(45, 162, 252);
+//         .nav-link:hover {
+//             border-bottom: none;
+//         }
+//         h3:hover {
+//             color: white;
+//         }
+//     }
+//     #showcase {
+//         min-height: 750px;
+//         h1 {
+//             font-size: 4rem;
+//         }
+//         .lead {
+//             font-size: 2.4rem;
+//         }
+//     }
+//     #threeIcon {
+//         i {
+//             font-size: 6rem;
+//         }
+//         h3 {
+//             font-size: 3rem;
+//         }
+//         p {
+//             font-size: 1.8rem;
+//         }
+//     }
+//     #customer {
+//         text-align: center;
+//         p {
+//             font-size: 1.8rem;
+//         }
+//         h3 {
+//             font-size: 3rem;
+//         }
+//     }
+//     #quotes {
+//         h1 {
+//             font-size: 3.6rem;
+//         }
+//     }
+    
+//     #pricing {
+//         #cities {
+//             height: 150px;
+//         }
+//         #pricingHeader {
+//             font-size: 3.5rem;
+//         }
+//        p {
+//            font-size: 1.5rem;
+//        }
+//     }
+// }
+
+
+
+
+
+// // Large devices (desktops, 992px and up)
+// @media (max-width: 991px) { 
+//     .navbar {
+//         background: rgb(45, 162, 252);
+//     }
+// }
+
+// @media (min-width: 992px) {
+//     #pricing {
+//         #cities {
+//             height: 220px;
+//         }
+//     }
+// }
+
+// @media (min-width: 992px) and (max-width: 1199px) {
+//     .carousel-item {
+//         img {
+//             height: 420px;
+//         }
+//     }
+// }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { 
+//     .carousel-item {
+//         img {
+//             height: 350px;
+//         }
+//     }
+// }

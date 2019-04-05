@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!-- Font link -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat" rel="stylesheet">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/main.css">
+    <title>GiftGrab</title>
+</head>
+<body>
+        <%- include('nav', {navClass: "bg-primary navBarSignUp"}); %>
+
+        <!-- Sign up form -->
+        <div class="container my-3">
+            <h1 class="display-1 text-primary text-center">Sign Up</h1>
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <form action="/auth/signup" method="post">
+                        <div class="form-group">
+                            <label for="firstName" class="text-primary">First Name</label>
+                            <input type="text" name="firstName" id="firstName" class="form-control" placeholder="John">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" class="text-primary">Last Name</label>
+                            <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="text-primary">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="text-primary">Password</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="*****">
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="password-repeat" class="text-primary">Password</label>
+                            <input type="password" name="passwordRepeat" id="password-repeat" class="form-control" placeholder="*****">
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="checkbox" name="" id="agree"> <span id="terms">I have read and agree to GiftGrab's terms of service.</span>
+                                </div>
+                            </div>
+                            <div class="col-6 text-right">
+                                <input type="submit" class="btn btn-lg btn-primary" value="Sign Up">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="d-none d-lg-flex justify-content-center flex-column col-lg-4 align-items-center" style="height: 400px;">
+                    <h3 class="text-primary text-center mb-3">Why you'll love GiftGrab:</h3>
+                    <ul>
+                        <li class="mb-3">We bring gifts and items to you at the touch of your fingers</li>
+                        <li class="mb-3">Relax at home while we shop and wait in line for you</li>
+                        <li>We'll even wrap gifts for you to make things extra easy</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <% include modal.ejs %>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/giftgrab.js"></script>
+</body>
+</html>

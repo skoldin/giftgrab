@@ -1,0 +1,47 @@
+<!-- navbar -->
+<div class="navbar-wrap <%= (navClass) ? navClass : '' %>">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a href="/" class="navbar-brand">
+            <h3 class="display-5 mb-0">GiftGrab <i class="fas fa-gift"></i> </h3>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#giftgrabNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="giftgrabNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="/" class="nav-link">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/#threeIcon" class="nav-link">About <span class="sr-only">About</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/#pricing" class="nav-link">Pricing <span class="sr-only">Contact</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/#footer" class="nav-link" id="contact">Contact <span class="sr-only">Contact</span></a>
+                </li>
+            </ul>
+            <div class="ml-auto mr-lg-2 mt-5 mt-lg-0">
+                <ul class="navbar-nav">
+                    <% if(!isLoggedIn) { %>
+                        <li class="nav-item">
+                            <a href="/auth/signup" class="nav-link active">Sign Up <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link active" data-toggle="modal" data-target="#giftgrabSignIn">Sign In <span class="sr-only">About</span></a>
+                        </li>
+                    <% } else { %>
+                        <li class="nav-item" style="color: white">
+                            <a href="/auth/logout" class="nav-link active">Log out</a>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+            <a href="/order"><button class="btn btn-lg btn-light text-primary">Order Now</button></a>
+
+        </div>
+    </nav>
+    <% include messages.ejs %>
+</div>

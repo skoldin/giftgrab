@@ -1,0 +1,12 @@
+{
+  "extends": ["eslint-config-airbnb", "prettier"],
+  "rules": {
+    "no-plusplus": 0,
+    "no-continue": 0,
+    "comma-dangle": 0,
+    "no-trailing-spaces": ["warn", { "skipBlankLines": true }]
+  },
+  "globals": {
+    "document": true
+  }
+}
